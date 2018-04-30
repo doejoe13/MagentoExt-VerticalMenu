@@ -1,0 +1,78 @@
+uighugui
+<?php $_categories = Mage::helper('catalog/category')->getStoreCategories() ?>
+<?php if(count($_categories)): ?>
+<div class="chigusa-menu-container visible-lg visible-md">
+	<?php if(Mage::getStoreConfig('verticalmenu/general/title')){?>
+			<div class="chigusa-menu-title">				<h2><?php echo Mage::getStoreConfig('verticalmenu/general/title'); ?></h2>				<i class="fa fa-align-left"></i>			</div>
+		<?php }?>
+    <div id="chigusa-verticalmenu" class="chigusa-verticalmenu">
+        
+        <?php
+        $showhome = Mage::getStoreConfig('verticalmenu/general/showhome');
+        $active = '';
+        if(Mage::getSingleton('cms/page')->getIdentifier() == 'home'  && Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms') :
+            $active = ' act';
+        endif; 
+        if($showhome){
+            $id     = "_home";
+            $html[] = '<div id="chigusa-pt-menu' . $id . '" class="chigusa-pt-menu' . $active . '" >';
+            $html[] = '<div class="chigusa-parent-menu">';
+            $html[] = '<a href="'.Mage::helper('core/url')->getHomeUrl().'">';
+            $html[] = '<span>Home</span>';
+            $html[] = '</a>';
+            $html[] = '</div>';
+            $html[] = '<div class="chigusa-wrap-popup"><div id="popup' . $id . '" class="popup" >';
+            $html[] = '</div>';
+            $html[] = '</div>';
+            $html[] = '</div>';
+            $html = implode("\n", $html);
+            echo $html;
+        }
+	$n = 0;
+	foreach ($_categories as $_category):
+	$n++;
+	endforeach;
+	//echo $n;
+	
+	$i=1;
+	$total = count($_categories);
+	$selectedIds = explode(',', Mage::getStoreConfig('verticalmenu/general/catsid'));
+	
+        foreach ($_categories as $_category):
+	    $class='';
+	    if($i==1) $class="first";
+	    else if($i==$n) $class="last";
+		if (!in_array($_category->getId(), $selectedIds)) {
+			echo $this->drawCustomMenuItem($_category,0, false, $class);
+		}
+	    $i++;
+        endforeach ?>
+        
+        <div class="clearBoth"></div>
+    </div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var VMEGAMENU_POPUP_EFFECT = <?php echo (int)Mage::getStoreConfig('verticalmenu/popup/effect')?>;
+//]]>
+
+jQuery(document).ready(function(){
+    jQuery("#chigusa-pt-menu_link ul li").each(function(){
+        var url = document.URL;
+        jQuery("#chigusa-pt-menu_link ul li a").removeClass("active");
+        jQuery('#chigusa-pt-menu_link ul li a[href="'+url+'"]').addClass('active');
+    }); 
+        
+    jQuery('.chigusa-pt-menu').hover(function(){
+        if(VMEGAMENU_POPUP_EFFECT == 0) jQuery(this).find('.popup').stop(true,true).slideDown('slow');
+        if(VMEGAMENU_POPUP_EFFECT == 1) jQuery(this).find('.popup').stop(true,true).fadeIn('slow');
+        if(VMEGAMENU_POPUP_EFFECT == 2) jQuery(this).find('.popup').stop(true,true).show('slow');
+    },function(){
+        if(VMEGAMENU_POPUP_EFFECT == 0) jQuery(this).find('.popup').stop(true,true).slideUp('fast');
+        if(VMEGAMENU_POPUP_EFFECT == 1) jQuery(this).find('.popup').stop(true,true).fadeOut('fast');
+        if(VMEGAMENU_POPUP_EFFECT == 2) jQuery(this).find('.popup').stop(true,true).hide('fast');
+    })
+});
+</script>
+
+<?php endif ?>

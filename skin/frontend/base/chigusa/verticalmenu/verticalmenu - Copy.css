@@ -1,0 +1,206 @@
+/*=================leftmegamenu============================*/ 
+.chigusa-menu-title{position: relative;    padding: 13px 0px;}
+.chigusa-menu-title h2{margin: 0;color: #fff;text-transform: uppercase; font-weight: 400; font-size: 18px;text-align:center;}.chigusa-menu-title .fa{	position: absolute;    left: 20px;    top: 35%;    font-size: 16px;}
+.chigusa-verticalmenu {
+padding:0 20px 2px;
+z-index: 1000;
+background-color:#f4f4f4
+}
+.chigusa-verticalmenu  .chigusa-parent-menu{}
+.chigusa-verticalmenu  .last .chigusa-parent-menu{background: none}
+.chigusa-verticalmenu div.chigusa-pt-menu {
+    padding: 0px;
+    /*width: 195px;*/
+    position: relative;
+}
+.chigusa-verticalmenu div.popup {
+padding:2px 0 2px 40px;
+display: none;
+position: absolute;
+left:46px !important;
+top:-2px !important;
+text-align: left;
+width: auto !important;
+z-index: 3000;
+}
+.box-popup {
+border: 1px solid #e5e5e3;
+background:  #FFFFFF;
+padding:30px;
+margin: 0 0 0 -10px;
+float: left;
+box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)
+}
+.arrow-left-menu{
+float: left;
+height: 50px;
+margin: -5px 0 0 -15px;
+padding: 0;
+width: 19px;
+position: relative;
+z-index: 1;    
+}
+.chigusa-verticalmenu div.chigusa-pt-menu .chigusa-parent-menu a,
+.chigusa-verticalmenu div.chigusa-pt-menu .chigusa-parent-menu span.block-title{
+text-decoration: none;
+display:block;
+line-height:16px;
+padding: 15px 15px 15px 15px;
+color: #777777;
+text-transform: uppercase;
+word-wrap: break-word;
+font-size: 16px;
+}
+.chigusa-verticalmenu div.chigusa-pt-menu .noSubMenu a, .chigusa-verticalmenu div.chigusa-pt-menu .noSubMenu span.block-title{background-image: none}
+
+.chigusa-verticalmenu div.chigusa-pt-menu .chigusa-parent-menu span.block-title:hover, .chigusa-verticalmenu div.chigusa-pt-menu .chigusa-parent-menu a:hover{color: #f36b6c
+}
+.chigusa-verticalmenu #chigusa-pt-menu_link ul li a.act,
+ .chigusa-verticalmenu #chigusa-pt-menu_link ul li a:hover,
+  .chigusa-verticalmenu div.chigusa-pt-menu.act .chigusa-parent-menu a,
+  .chigusa-verticalmenu div.chigusa-pt-menu.active .chigusa-parent-menu a
+{
+color: #f36b6c
+}
+.chigusa-verticalmenu div.chigusa-pt-menu .chigusa-parent-menu.noSubMenu a:hover,
+ .chigusa-verticalmenu div.chigusa-pt-menu .chigusa-parent-menu.noSubMenu span.block-title:hover,
+ .chigusa-verticalmenu div.chigusa-pt-menu.act .chigusa-parent-menu.noSubMenu a
+ {
+background-image: none    
+}
+.custom-menu-right { float: left; margin: 0;}
+.chigusa-verticalmenu .column.blockright { width: 150px !important; }
+.menu-right-title {
+    float: left;
+    margin: 0 0 20px 0;
+    width: 100%;
+}
+.menu-right-title h2 {
+    color: #777777;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 8px;
+    text-transform: uppercase;
+}
+.menu-right-images { float: left;}
+.m-images { float: left;}
+.m-images.col1 { margin:20px 0 0;}
+.chigusa-verticalmenu div.chigusa-pt-menu.last .chigusa-parent-menu.noSubMenu{
+    border: 0;
+}
+.chigusa-menu-container { position: relative; z-index:100; float: left; width: 20%;}
+.cms-index-index .chigusa-menu-container{margin: 9px 0 0px;}
+.chigusa-verticalmenu div.popup a {
+    text-decoration: none;
+    display:block;
+}
+.chigusa-verticalmenu .itemMenu h4.level1,
+.chigusa-verticalmenu .itemMenu a.level1{
+    color: #777777;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    text-transform: uppercase;
+    width: 100%;
+    padding-bottom: 5px
+}
+.chigusa-verticalmenu .itemMenu h4.level1,
+.chigusa-verticalmenu .itemSubMenu h4.level2 span{
+    color: #897725;
+}
+.chigusa-verticalmenu .itemMenu h4.level1:hover, .chigusa-verticalmenu .itemMenu a.level1:hover{
+color:#f36b6c 
+}
+.chigusa-verticalmenu .itemSubMenu h4.level2,
+.chigusa-verticalmenu .itemSubMenu a.level2,
+.chigusa-verticalmenu .itemSubMenu h4.level3,
+.chigusa-verticalmenu .itemSubMenu a.level3,
+.chigusa-verticalmenu .itemMenu a.level1.nochild{
+    color:#888888;
+    text-transform: none;
+    font-weight: normal;
+    line-height: 25px;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding-left: 13px
+}
+.chigusa-verticalmenu .itemSubMenu h4.level2:hover,
+.chigusa-verticalmenu .itemSubMenu a.level2:hover,
+.chigusa-verticalmenu .itemSubMenu h4.level3:hover,
+.chigusa-verticalmenu .itemSubMenu a.level3:hover,
+.chigusa-verticalmenu .itemMenu a.level1.nochild:hover{
+color:#f36b6c ;
+background-position: 0 -33px
+}
+.chigusa-verticalmenu div.popup a.act{color: #f36b6c;}
+
+.chigusa-verticalmenu div.column {
+    float:left;
+    width:170px;
+    margin-right: 15px;
+    padding-right:0;
+}
+.chigusa-verticalmenu div.column.last {
+    border-right: 0 none;
+    margin-right: 0;
+    padding-right: 0;
+}
+.chigusa-verticalmenu div.itemSubMenu {
+    margin-top:10px;
+    margin-bottom:20px
+}
+.chigusa-verticalmenu .clearBoth {
+    clear:both;
+}
+.chigusa-verticalmenu .block2{
+    margin-top: 10px;
+}
+.chigusa-verticalmenu #popup_home{
+    display: none !important;
+}
+.chigusa-verticalmenu div.popup .block1{
+    overflow: hidden;
+}
+.chigusa-verticalmenu div.popup .block1 .column{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+/*show right block*/
+.chigusa-verticalmenu div.popup .floatleft{
+    float: left;
+}
+.chigusa-verticalmenu div.popup .blockright img{
+    max-width: 100%;
+} 
+.chigusa-verticalmenu .chigusa-parent-menu .block-title{
+    color: #1E7EC8;
+}
+
+.chigusa-verticalmenu div.chigusa-pt-menu .chigusa-parent-menu p{
+    margin: 0;
+    padding: 0;
+}
+.chigusa-verticalmenu #chigusa-pt-menu_link .chigusa-parent-menu ul li{
+    float: none;
+    list-style: none;
+}
+.chigusa-verticalmenu #chigusa-pt-menu_link .chigusa-parent-menu ul li a{
+    float: none;
+    padding: 5px 10px 6px;
+    display: block;
+}
+.chigusa-verticalmenu #chigusa-pt-menu_link{
+    padding: 0;
+    width: 195px;
+}
+.chigusa-verticalmenu .chigusa-wrap-popup{
+    position: absolute;
+    left: 177px;
+    top: 0;
+    width:1000px;
+}
+.chigusa-verticalmenu .chigusa-wrap-popup:after { display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+.chigusa-verticalmenu div.chigusa-pt-menu{
+    padding: 0 !important;
+}

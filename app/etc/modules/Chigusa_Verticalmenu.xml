@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Chigusa_Verticalmenu>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Chigusa_Verticalmenu>
+    </modules>
+</config> 
