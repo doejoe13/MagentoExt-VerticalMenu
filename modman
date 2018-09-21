@@ -1,4 +1,5 @@
+app/etc/modules/Chigusa_Verticalmenu.xml
 app/code/local/Chigusa/Verticalmenu
-app/design/frontend/base/default
-app/etc/modules
-skin/frontend/base/chigusa/verticalmenu
+app/design/frontend/base/default/layout/verticalmenu.xml
+app/design/frontend/base/default/template/chigusa/verticalmenu/
+skin/frontend/base/chigusa/verticalmenu/
