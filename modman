@@ -1,2 +1,4 @@
-
+app/code/local/Chigusa/Verticalmenu
+app/design/frontend/base/default
+app/etc/modules
 skin/frontend/base/chigusa/verticalmenu
